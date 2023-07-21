@@ -1,0 +1,6 @@
+*.txt
+*.json
+*.rpyc
+*.bak
+/game/cache/
+/game/saves/
