@@ -1,27 +1,30 @@
 ﻿define hana = Character('Хана', color="#c8ffc8")
 
+image findcat = im.Rotozoom('backgrounds/findcat.jpg', 0, 2)
 
 init python:
     import time
 
+    from game.backgrounds import mappings
+
     style.default.justify = True
 
-    class inverse_timer():
-        def __init__(self, seconds = 0):
-            self.seconds = seconds
-            self.alarmed = false
+    class Inverse_Timer(object):
+        seconds = 0
+        alarmed = False
 
-        def count_down(self, seconds = None):
-            if not seconds:
-                seconds = self.seconds
-            time.sleep(seconds)
+        def count_down(self):
+            time.sleep(self.seconds)
 
-    class camera():
+    class Camera(object):
         def __init__(self):
             pass
 
-        def catch():
-            pass
+        def catch(self):
+            return 'asd'
+
+    timer = Inverse_Timer()
+    cam = Camera()
 
 
 label start:
@@ -44,8 +47,15 @@ label start:
 
 
 label clock_test:
+    'Часы ещё не готовы'
+
     return
 
 
 label camera_test:
-    return
+    $ res = cam.catch()
+
+    scene findcat
+
+    'Камера ещё не готова. Но...'
+    'Скоро ты сможешь поискать тут кота'

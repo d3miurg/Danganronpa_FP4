@@ -303,6 +303,10 @@ screen navigation():
 
             textbutton _("Начать") action Start()
 
+            textbutton _("Тест часов") action Start('clock_test')
+
+            textbutton _("Тест камеры") action Start('camera_test')
+
         else:
 
             textbutton _("История") action ShowMenu("history")
