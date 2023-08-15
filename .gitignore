@@ -2,5 +2,7 @@
 *.json
 *.rpyc
 *.bak
+*.pyc
 /game/cache/
 /game/saves/
+**/**/**/__pycache__/

@@ -1,7 +1,13 @@
-﻿define hana = Character('Хана', color="#c8ffc8")
+define hana = Character('Хана', color="#c8ffc8")
 
-image findcat = im.Rotozoom('backgrounds/findcat.jpg', 0, 2)
-
+image findcat = im.Rotozoom('backgrounds/findcat.png', 0, 2.4)
+'''image rects = Composite((1936.8, 1089.6),
+                        (300, 200), Frame(red_rectangle),
+                        (0, 50), Frame(Borders(5, 5, 5, 5)),
+                        (600, 150), Frame(Borders(5, 5, 5, 5)),
+                        (0, 0), Frame(Borders(5, 5, 5, 5)),
+                        (400, 0), Frame(Borders(5, 5, 5, 5)))
+'''
 init python:
     import time
 
@@ -25,6 +31,7 @@ init python:
 
     timer = Inverse_Timer()
     cam = Camera()
+
 
 
 label start:
@@ -57,5 +64,8 @@ label camera_test:
 
     scene findcat
 
+    # '''show rects'''
+
     'Камера ещё не готова. Но...'
     'Скоро ты сможешь поискать тут кота'
+    # '''Сейчас тут показаны области, в которых можно искать'''
